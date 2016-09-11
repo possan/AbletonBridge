@@ -12,11 +12,11 @@ This is a hacky work in progress, not finished in any way...
 
 ## Background
 
-Ableton Live is great, and it rarely crashes, having that as something that backs your' audio based installations is perfect, the problem is that just sending MIDI notes into it in realtime is not always optimal, and means that your external application needs to be able to keep up with the tempo in Live, which might be difficult if it's doing lot's of other things.
+[Ableton Live](https://www.ableton.com/en/live/) is great, and it rarely crashes, having that as something that backs your' audio based installations is perfect, the problem is that just sending MIDI notes into it in realtime is not always optimal, and means that your external application needs to be able to keep up with the tempo in Live, which might be difficult if it's doing lot's of other things.
 
-This is a small hack to be able to manipulate an Abelton Live liveset from outside the app, my usecases for this is that i want to use my custom hardware to edit patterns inside of Live, just like the Push does, and that i wan't to use Live as the player but control it from external events, such as Bluetooth sensors etc.
+This is a small hack to be able to manipulate an Abelton Live liveset from outside the app, my usecases for this is that i want to use [my custom hardware](https://www.youtube.com/watch?v=plqFOPkOJd4) to edit patterns inside of Live, just like the [Push](https://www.ableton.com/en/push/) does, and that i wan't to use Live as the player but control it from external events, such as [Bluetooth sensors](https://github.com/possan/sensortag-midi) etc.
 
-Since the MIDI Remote Scripts are written in Python, it seems fairly easy, but the documentation is sparse except for the decompyled files from the bundled scripts, and i'd like to control it from the outside.
+Since the MIDI Remote Scripts are written in Python, it seems fairly easy, but the documentation is sparse except for the work by [Julien Bayle](http://julienbayle.net/ableton-live-9-midi-remote-scripts/), [decompyled files from the bundled scripts](https://github.com/gluon/AbletonLive9_RemoteScripts) and a few [blogposts by Keith McMillen](https://www.keithmcmillen.com/blog/controlling-the-controllers-communicating-with-and-controlling-live-scripts-part-3/), and i'd like to control it from the outside.
 
 I tried running a socket server inside the script, didn't work, so, i resorted to sending JSON data over Sysex, the protocol is described below.
 
